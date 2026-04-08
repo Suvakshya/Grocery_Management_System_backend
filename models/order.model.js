@@ -1,23 +1,415 @@
+// // import mongoose from "mongoose";
+// // const orderSchema = new mongoose.Schema(
+// //   {
+// //     userId: { type: String, required: true, ref: "User" },
+// //     items: [
+// //       {
+// //         product: { type: String, required: true, ref: "Product" },
+// //         quantity: { type: Number, required: true },
+// //       },
+// //     ],
+// //     amount: { type: Number, required: true },
+// //     address: { type: String, required: true, ref: "Address" },
+// //     status: { type: String, default: "Order Placed" },
+// //     paymentType: { type: String, required: true },
+// //     isPaid: { type: Boolean, required: true, default: false },
+// //   },
+// //   { timestamps: true }
+// // );
+// // const Order = mongoose.model("Order", orderSchema);
+// // export default Order;
+
+
+
+
+
+
+// // import mongoose from "mongoose";
+
+// // const orderSchema = new mongoose.Schema(
+// //   {
+// //     userId: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "User" 
+// //     },
+// //     items: [
+// //       {
+// //         product: { 
+// //           type: String, 
+// //           required: true, 
+// //           ref: "Product" 
+// //         },
+// //         quantity: { 
+// //           type: Number, 
+// //           required: true 
+// //         },
+// //       },
+// //     ],
+// //     amount: { 
+// //       type: Number, 
+// //       required: true 
+// //     },
+// //     address: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "Address" 
+// //     },
+// //     status: { 
+// //       type: String, 
+// //       default: "Order Placed",
+// //       enum: ["Order Placed", "Processing", "Shipped", "Delivered", "Cancelled"] // Add enum validation
+// //     },
+// //     paymentType: { 
+// //       type: String, 
+// //       required: true,
+// //       enum: ["COD", "PayPal", "Card"] // Optional: add enum for payment types
+// //     },
+// //     isPaid: { 
+// //       type: Boolean, 
+// //       required: true, 
+// //       default: false 
+// //     },
+// //     paypalOrderId: { // Add this if you want to store PayPal order ID
+// //       type: String,
+// //       sparse: true // Allows multiple documents without this field
+// //     }
+// //   },
+// //   { timestamps: true }
+// // );
+
+// // const Order = mongoose.model("Order", orderSchema);
+// // export default Order;
+
+
+
+
+
+
+// // import mongoose from "mongoose";
+
+// // const orderSchema = new mongoose.Schema(
+// //   {
+// //     userId: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "User" 
+// //     },
+// //     items: [
+// //       {
+// //         product: { 
+// //           type: String, 
+// //           required: true, 
+// //           ref: "Product" 
+// //         },
+// //         quantity: { 
+// //           type: Number, 
+// //           required: true 
+// //         },
+// //       },
+// //     ],
+// //     amount: { 
+// //       type: Number, 
+// //       required: true 
+// //     },
+// //     address: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "Address" 
+// //     },
+// //     status: { 
+// //       type: String, 
+// //       default: "Order Placed",
+// //       enum: ["Order Placed", "Processing", "Shipped", "Delivered", "Cancelled", "Pending Payment", "Payment Completed"]
+// //     },
+// //     paymentType: { 
+// //       type: String, 
+// //       required: true,
+// //       enum: ["COD", "PayPal", "Card"]
+// //     },
+// //     isPaid: { 
+// //       type: Boolean, 
+// //       required: true, 
+// //       default: false 
+// //     },
+// //     paypalOrderId: {
+// //       type: String,
+// //       sparse: true
+// //     }
+// //   },
+// //   { timestamps: true }
+// // );
+
+// // const Order = mongoose.model("Order", orderSchema);
+// // export default Order;
+
+
+
+
+
+
+
+
+
+
+
+
+// // import mongoose from "mongoose";
+
+// // const orderSchema = new mongoose.Schema(
+// //   {
+// //     userId: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "User" 
+// //     },
+// //     items: [
+// //       {
+// //         product: { 
+// //           type: String, 
+// //           required: true, 
+// //           ref: "Product" 
+// //         },
+// //         quantity: { 
+// //           type: Number, 
+// //           required: true 
+// //         },
+// //       },
+// //     ],
+// //     amount: { 
+// //       type: Number, 
+// //       required: true 
+// //     },
+// //     address: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "Address" 
+// //     },
+// //     status: { 
+// //       type: String, 
+// //       default: "Order Placed",
+// //       enum: ["Order Placed", "Processing", "Shipped", "Delivered", "Cancelled", "Pending Payment", "Payment Completed"]
+// //     },
+// //     paymentType: { 
+// //       type: String, 
+// //       required: true,
+// //       enum: ["COD", "Stripe", "PayPal", "Card"]
+// //     },
+// //     isPaid: { 
+// //       type: Boolean, 
+// //       required: true, 
+// //       default: false 
+// //     },
+// //     stripeSessionId: {
+// //       type: String,
+// //       sparse: true
+// //     }
+// //   },
+// //   { timestamps: true }
+// // );
+
+// // const Order = mongoose.model("Order", orderSchema);
+// // export default Order;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // import mongoose from "mongoose";
+
+// // const orderSchema = new mongoose.Schema(
+// //   {
+// //     userId: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "User" 
+// //     },
+// //     items: [
+// //       {
+// //         product: { 
+// //           type: String, 
+// //           required: true, 
+// //           ref: "Product" 
+// //         },
+// //         quantity: { 
+// //           type: Number, 
+// //           required: true 
+// //         },
+// //       },
+// //     ],
+// //     amount: { 
+// //       type: Number, 
+// //       required: true 
+// //     },
+// //     address: { 
+// //       type: String, 
+// //       required: true, 
+// //       ref: "Address" 
+// //     },
+// //     status: { 
+// //       type: String, 
+// //       default: "Order Placed",
+// //       enum: [
+// //         "Order Placed", 
+// //         "Processing", 
+// //         "Shipped", 
+// //         "Delivered", 
+// //         "Cancelled", 
+// //         "Pending Payment", 
+// //         "Payment Completed"
+// //       ]
+// //     },
+// //     paymentType: { 
+// //       type: String, 
+// //       required: true,
+// //       enum: ["COD", "Stripe", "PayPal", "Card"]
+// //     },
+// //     isPaid: { 
+// //       type: Boolean, 
+// //       required: true, 
+// //       default: false 
+// //     },
+// //     stripeSessionId: {
+// //       type: String,
+// //       sparse: true
+// //     }
+// //   },
+// //   { timestamps: true }
+// // );
+
+// // const Order = mongoose.model("Order", orderSchema);
+// // export default Order;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import mongoose from "mongoose";
+
 // const orderSchema = new mongoose.Schema(
 //   {
-//     userId: { type: String, required: true, ref: "User" },
+//     userId: {
+//       type: String,
+//       required: true,
+//       ref: "User"
+//     },
 //     items: [
 //       {
-//         product: { type: String, required: true, ref: "Product" },
-//         quantity: { type: Number, required: true },
+//         product: {
+//           type: String,
+//           required: true,
+//           ref: "Product"
+//         },
+//         quantity: {
+//           type: Number,
+//           required: true
+//         },
 //       },
 //     ],
-//     amount: { type: Number, required: true },
-//     address: { type: String, required: true, ref: "Address" },
-//     status: { type: String, default: "Order Placed" },
-//     paymentType: { type: String, required: true },
-//     isPaid: { type: Boolean, required: true, default: false },
+//     amount: {
+//       type: Number,
+//       required: true
+//     },
+//     address: {
+//       type: String,
+//       required: true,
+//       ref: "Address"
+//     },
+//     status: {
+//       type: String,
+//       default: "Order Placed",
+//       enum: [
+//         "Order Placed",
+//         "Processing",
+//         "Shipped",
+//         "Delivered",
+//         "Cancelled",
+//         "Pending Payment",
+//         "Payment Completed"
+//       ]
+//     },
+//     paymentType: {
+//       type: String,
+//       required: true,
+//       enum: ["COD", "Stripe", "PayPal", "Card"]
+//     },
+//     isPaid: {
+//       type: Boolean,
+//       required: true,
+//       default: false
+//     },
+//     stripeSessionId: {
+//       type: String,
+//       sparse: true
+//     }
 //   },
 //   { timestamps: true }
 // );
+
 // const Order = mongoose.model("Order", orderSchema);
 // export default Order;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28,52 +420,30 @@ import mongoose from "mongoose";
 
 const orderSchema = new mongoose.Schema(
   {
-    userId: { 
-      type: String, 
-      required: true, 
-      ref: "User" 
-    },
+    userId: { type: String, required: true, ref: "User" },
     items: [
       {
-        product: { 
-          type: String, 
-          required: true, 
-          ref: "Product" 
-        },
-        quantity: { 
-          type: Number, 
-          required: true 
-        },
+        product: { type: String, required: true, ref: "Product" },
+        quantity: { type: Number, required: true },
       },
     ],
-    amount: { 
-      type: Number, 
-      required: true 
-    },
-    address: { 
-      type: String, 
-      required: true, 
-      ref: "Address" 
-    },
-    status: { 
-      type: String, 
-      default: "Order Placed",
-      enum: ["Order Placed", "Processing", "Shipped", "Delivered", "Cancelled"] // Add enum validation
-    },
-    paymentType: { 
-      type: String, 
-      required: true,
-      enum: ["COD", "PayPal", "Card"] // Optional: add enum for payment types
-    },
-    isPaid: { 
-      type: Boolean, 
-      required: true, 
-      default: false 
-    },
-    paypalOrderId: { // Add this if you want to store PayPal order ID
+    amount: { type: Number, required: true },
+    address: { type: String, required: true, ref: "Address" },
+    status: {
       type: String,
-      sparse: true // Allows multiple documents without this field
-    }
+      default: "Order Placed",
+      enum: [
+        "Order Placed", "Processing", "Shipped",
+        "Delivered", "Cancelled", "Pending Payment", "Payment Completed"
+      ]
+    },
+    paymentType: {
+      type: String,
+      required: true,
+      enum: ["COD", "Stripe", "PayPal", "Card"]
+    },
+    isPaid: { type: Boolean, required: true, default: false },
+    stripeSessionId: { type: String, sparse: true }
   },
   { timestamps: true }
 );

@@ -1,4 +1,17 @@
-// routes/payment.routes.js
+// // routes/payment.routes.js
+// import express from "express";
+// import authUser from "../middlewares/authUser.js";
+// import { createPaypalOrder, capturePaypalPayment } from "../controller/payment.controller.js";
+
+// const router = express.Router();
+
+// router.post("/create-paypal-order", authUser, createPaypalOrder);
+// router.post("/capture-payment", authUser, capturePaypalPayment);
+
+// export default router;
+
+
+
 import express from "express";
 import authUser from "../middlewares/authUser.js";
 import { createPaypalOrder, capturePaypalPayment } from "../controller/payment.controller.js";
@@ -6,6 +19,6 @@ import { createPaypalOrder, capturePaypalPayment } from "../controller/payment.c
 const router = express.Router();
 
 router.post("/create-paypal-order", authUser, createPaypalOrder);
-router.post("/capture-payment", authUser, capturePaypalPayment);
+router.post("/capture-paypal-payment", authUser, capturePaypalPayment); // fixed: was /capture-payment
 
 export default router;
